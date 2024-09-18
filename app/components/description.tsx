@@ -5,7 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 export default function Description() {
   return (
     <>
-      <div className="mt-[40px] text-[#d1d5db]">
+      <div className="mt-[30px] text-soft-gray">
         <p>
           I’m a fullstack developer specializing in building scalable applications with Node.js and TypeScript. Throughout my career, I’ve worked on projects at various stages, from the ground up to production, as well as maintaining existing projects, always aiming for efficient and robust solutions.
         </p>

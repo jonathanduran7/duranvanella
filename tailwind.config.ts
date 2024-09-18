@@ -14,6 +14,8 @@ const config: Config = {
       },
       textColor: {
         'gray': '#D4D4D4',
+        'gray-dark': '#787878',
+        'soft-gray': '#d1d5db',
       },
     },
     fontSize: {
