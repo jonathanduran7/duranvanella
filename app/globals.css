@@ -26,3 +26,9 @@ body {
     text-wrap: balance;
   }
 }
+
+@media (max-width: 440px){
+  body {
+    padding: 44px 25px;
+  }
+}
