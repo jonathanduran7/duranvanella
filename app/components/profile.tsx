@@ -7,7 +7,7 @@ export default function Profile() {
 
       <div className="mt-4">
         <p className="text-xl">Jonathan Duran Vanella</p>
-        <p className="text-base text-gray italic">Full Stack Developer, He/Him</p>
+        <p className="text-base text-gray italic">Full Stack Developer</p>
       </div>
     </div>
   )
