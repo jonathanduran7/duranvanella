@@ -21,6 +21,7 @@ body {
   }
 }
 
+
 @media (max-width: 440px) {
   .paddingPage {
     padding: 25px 28px;
