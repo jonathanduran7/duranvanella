@@ -1,8 +1,15 @@
+'use client'
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default function Description() {
+
+  const redirectTo = (url: string) => {
+    window.open(url, '_blank');
+  }
+
   return (
     <>
       <div className="mt-[30px] dark:text-soft-gray text-black">
@@ -20,9 +27,9 @@ export default function Description() {
       </div>
 
       <div className='mt-5 flex gap-2'>
-        <GitHubIcon sx={{ fill: '#787878' }} className="cursor-pointer" />
-        <LinkedInIcon sx={{ fill: '#787878' }} className="cursor-pointer" />
-        <InstagramIcon sx={{ fill: '#787878' }} className="cursor-pointer" />
+        <GitHubIcon sx={{ fill: '#787878' }} className="cursor-pointer" onClick={() => redirectTo('https://github.com/jonathanduran7')} />
+        <LinkedInIcon sx={{ fill: '#787878' }} className="cursor-pointer" onClick={() => redirectTo('https://www.linkedin.com/in/duranjonathan7/')} />
+        <InstagramIcon sx={{ fill: '#787878' }} className="cursor-pointer" onClick={() => redirectTo('https://www.instagram.com/jonathanduranv/')} />
       </div>
 
       <div className="flex gap-5 mt-5 text-sm text-black dark:text-white">
