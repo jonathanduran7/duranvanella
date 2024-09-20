@@ -1,6 +1,8 @@
+'use client'
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "./context/ThemeProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -13,11 +15,6 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Duran Vanella",
-  description: "Full Stack Developer",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,11 +22,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-darkBackground text-darkForeground`}
-      >
-        {children}
-      </body>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+        <title>Duran Vanella</title>
+        <meta name="description" content="Full Stack Developer" />
+      </head>
+      <ThemeProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-darkBackground text-darkForeground`}
+        >
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
