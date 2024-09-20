@@ -9,20 +9,10 @@
   --dark-foreground: #ffffff;
 }
 
-/**/
-/* @media (prefers-color-scheme: dark) { */
-/*   :root { */
-/*     --background: #111316; */
-/*     --foreground: #ededed; */
-/*   } */
-/* } */
-
-
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  padding: 30px 240px 0px 240px;
 }
 
 @layer utilities {
@@ -32,7 +22,11 @@ body {
 }
 
 @media (max-width: 440px) {
-  body {
+  .paddingPage {
     padding: 25px 28px;
   }
+}
+
+.paddingPage {
+  padding: 30px 240px 0px 240px;
 }

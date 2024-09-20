@@ -1,6 +1,6 @@
 'use client'
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ThemeContext } from '../context/ThemeContext';
@@ -10,8 +10,8 @@ export default function Navbar() {
   const { theme, handleThemeChange } = useContext(ThemeContext)
 
   return (
-    <div className="w-full flex justify-between">
-      <ul className="flex gap-4 dark:bg-blue-200">
+    <div className="w-full flex justify-between text-black dark:text-darkForeground">
+      <ul className="flex gap-4">
         <li className="cursor-pointer underline font-bold">
           home
         </li>

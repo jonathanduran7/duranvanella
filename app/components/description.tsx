@@ -5,7 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 export default function Description() {
   return (
     <>
-      <div className="mt-[30px] text-soft-gray">
+      <div className="mt-[30px] dark:text-soft-gray text-black">
         <p>
           I’m a fullstack developer specializing in building scalable applications with Node.js and TypeScript. Throughout my career, I’ve worked on projects at various stages, from the ground up to production, as well as maintaining existing projects, always aiming for efficient and robust solutions.
         </p>
@@ -25,7 +25,7 @@ export default function Description() {
         <InstagramIcon sx={{ fill: '#787878' }} className="cursor-pointer" />
       </div>
 
-      <div className="flex gap-5 mt-5 text-sm">
+      <div className="flex gap-5 mt-5 text-sm text-black dark:text-white">
         <p className="underline cursor-pointer">View resume</p>
         <p className="underline cursor-pointer">Contact me</p>
       </div>

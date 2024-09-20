@@ -5,7 +5,7 @@ import WorkExperience from "./components/work-experience";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-background text-dark dark:bg-darkBackground dark:text-darkForeground paddingPage">
       <Navbar />
       <Profile />
       <Description />
