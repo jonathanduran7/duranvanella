@@ -20,12 +20,12 @@ body {
 }
 
 
+.paddingPage {
+  padding: 30px 240px 0px 240px;
+}
+
 @media (max-width: 440px) {
   .paddingPage {
     padding: 25px 28px;
   }
-}
-
-.paddingPage {
-  padding: 30px 240px 0px 240px;
 }
