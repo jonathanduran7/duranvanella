@@ -1,8 +1,8 @@
 export default function Profile() {
   return (
     <div>
-      <div className="bg-white w-[135px] h-[135px] rounded-full mt-4 text-black flex items-center justify-center border border-black dark:border-0">
-        Profile picture
+      <div className="bg-white w-[135px] h-[135px] rounded-full mt-4 text-black flex items-center justify-center">
+        <img src="/spiderman.jpg" alt="Jonathan Duran" className="w-[125px] h-[125px] rounded-full" />
       </div>
 
       <div className="mt-4">
