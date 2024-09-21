@@ -10,6 +10,14 @@ export default function Description() {
     window.open(url, '_blank');
   }
 
+  const downloadPdf = () => {
+    const path = 'CV_Jonathan_Duran.pdf'
+    const link = document.createElement('a');
+    link.href = path;
+    link.download = path;
+    link.click();
+  }
+
   return (
     <>
       <div className="mt-[30px] dark:text-soft-gray text-black">
@@ -33,7 +41,7 @@ export default function Description() {
       </div>
 
       <div className="flex gap-5 mt-5 text-sm text-black dark:text-white">
-        <p className="underline cursor-pointer">View resume</p>
+        <p className="underline cursor-pointer" onClick={downloadPdf}>View resume</p>
         <p className="underline cursor-pointer">Contact me</p>
       </div>
     </>
