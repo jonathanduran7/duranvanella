@@ -15,10 +15,10 @@ export default function Navbar() {
         <li className="cursor-pointer underline font-bold">
           home
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-pointer hidden sm:block">
           projects
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-pointer hidden sm:block">
           contact
         </li>
       </ul>

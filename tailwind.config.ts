@@ -8,6 +8,14 @@ const config: Config = {
   ],
   darkMode: 'class',
   theme: {
+    screens: {
+      sm: "450px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      '2xl': "1536px",
+      'celular': '320px',
+    },
     extend: {
       colors: {
         background: "var(--background)",
