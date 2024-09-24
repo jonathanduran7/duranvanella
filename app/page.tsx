@@ -2,6 +2,8 @@ import Navbar from "./ui/navbar";
 import Profile from "./components/profile";
 import Description from "./components/description";
 import WorkExperience from "./components/work-experience";
+import Footer from "./components/footer";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Profile />
       <Description />
       <WorkExperience />
+      <Contact />
+      <Footer />
     </div>
   );
 }
