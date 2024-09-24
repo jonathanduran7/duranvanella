@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { ChangeEvent, useState } from "react"
 
 export default function Contact() {
 
@@ -10,7 +10,7 @@ export default function Contact() {
     message: ''
   })
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value
