@@ -2,7 +2,11 @@
 
 import { ChangeEvent, useState } from "react"
 
-export default function Contact() {
+interface Props {
+  refElement: any
+}
+
+export default function Contact({ refElement }: Props) {
 
   const [form, setForm] = useState({
     name: '',
@@ -39,7 +43,7 @@ export default function Contact() {
   }
 
   return (
-    <div>
+    <div id="contact-section" ref={refElement}>
       <p className="mt-6 text-lg dark:text-white text-black">Contact</p>
       <div className="flex flex-wrap -mx-3 mb-6 mt-4">
         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
