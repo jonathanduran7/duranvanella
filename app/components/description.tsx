@@ -4,7 +4,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
-export default function Description() {
+interface Props {
+  scroll: () => void;
+}
+
+export default function Description({ scroll }: Props) {
 
   const redirectTo = (url: string) => {
     window.open(url, '_blank');
@@ -42,7 +46,7 @@ export default function Description() {
 
       <div className="flex gap-5 mt-5 text-sm text-black dark:text-white">
         <p className="underline cursor-pointer" onClick={downloadPdf}>View resume</p>
-        <p className="underline cursor-pointer">Contact me</p>
+        <p className="underline cursor-pointer" onClick={scroll}>Contact me</p>
       </div>
     </>
   )
