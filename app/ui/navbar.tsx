@@ -18,9 +18,6 @@ export default function Navbar() {
         <li className="cursor-pointer hidden sm:block">
           projects
         </li>
-        <li className="cursor-pointer hidden sm:block">
-          contact
-        </li>
       </ul>
 
       <div className='flex gap-3'>
