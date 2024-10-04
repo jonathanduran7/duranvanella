@@ -15,19 +15,19 @@ export default function Navbar() {
         <li className="cursor-pointer underline font-bold">
           home
         </li>
-        <li className="cursor-pointer hidden sm:block">
+        <li className="cursor-pointer hidden">
           projects
         </li>
       </ul>
 
       <div className='flex gap-3'>
-        <div className='cursor-pointer'>
+        <div className='cursor-pointer hidden'>
           <p>es/en</p>
         </div>
-        <div className='cursor-pointer' onClick={handleThemeChange}>
-          {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}
+          <div className='cursor-pointer' onClick={handleThemeChange}>
+            {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}
+          </div>
         </div>
-      </div>
-    </div >
-  );
+      </div >
+      );
 }
