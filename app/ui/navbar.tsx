@@ -15,7 +15,7 @@ export default function Navbar() {
         <li className="cursor-pointer underline font-bold">
           home
         </li>
-        <li className="cursor-pointer hidden">
+        <li className="cursor-pointer">
           projects
         </li>
       </ul>
@@ -24,10 +24,10 @@ export default function Navbar() {
         <div className='cursor-pointer hidden'>
           <p>es/en</p>
         </div>
-          <div className='cursor-pointer' onClick={handleThemeChange}>
-            {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}
-          </div>
+        <div className='cursor-pointer' onClick={handleThemeChange}>
+          {theme === 'light' ? <DarkModeIcon /> : <WbSunnyIcon />}
         </div>
-      </div >
-      );
+      </div>
+    </div >
+  );
 }
