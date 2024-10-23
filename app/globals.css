@@ -1,3 +1,5 @@
+@import 'highlight.js/styles/atom-one-dark.css'; /* Cambia el tema según tus preferencias */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,6 +25,29 @@ body {
   padding: 30px 240px 0px 240px;
 }
 
+/* Ajustes adicionales para los bloques de código */
+pre {
+  background: #2d2d2d; /* Fondo oscuro para bloques de código */
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto; /* Asegurar el desplazamiento horizontal para largas líneas de código */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #f8f8f8; /* Color del texto */
+}
+
+pre code {
+  font-family: 'Fira Code', monospace; /* Fuente monoespaciada para bloques de código */
+  font-size: 0.9em;
+}
+
+code {
+  background: #2d2d2d; /* Fondo oscuro para bloques de código en línea */
+  color: #f8f8f8;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
 @media(max-width: 1100px) {
   .paddingPage {
     padding: 30px 110px;
@@ -37,6 +62,6 @@ body {
 
 @media (max-width: 440px) {
   .paddingPage {
-    padding: 20px 20px;
+    padding: 20px 25px;
   }
 }

@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ThemeContext } from '../context/ThemeContext';
+import Link from 'next/link';
 
 export default function Navbar() {
 
@@ -12,12 +13,12 @@ export default function Navbar() {
   return (
     <div className="w-full flex justify-between text-black dark:text-darkForeground">
       <ul className="flex gap-4">
-        <li className="cursor-pointer underline font-bold">
+        <Link href="/" className="cursor-pointer underline font-bold">
           home
-        </li>
-        <li className="cursor-pointer">
-          projects
-        </li>
+        </Link>
+        <Link href="/blog" className='cursor-pointer'>
+          blog
+        </Link>
       </ul>
 
       <div className='flex gap-3'>
