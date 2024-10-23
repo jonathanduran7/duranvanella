@@ -5,6 +5,7 @@ import { remark } from 'remark';
 import rehype from 'remark-rehype';
 import rehypeHighlight from 'rehype-highlight';
 import html from 'rehype-stringify';
+import { Post } from '../interface/Post';
 
 const postsDirectory = path.join(process.cwd(), 'app/posts');
 
@@ -17,6 +18,22 @@ export function getAllPostIds() {
       },
     };
   });
+}
+
+export function getAllPosts() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = fileNames.map((fileName) => {
+    const id = fileName.replace(/\.md$/, '');
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const matterResult = matter(fileContents);
+    const data = matterResult.data as Omit<Post, 'id'>;
+    return {
+      id,
+      ...data,
+    };
+  });
+  return allPostsData;
 }
 
 export async function getPostData(id: string) {
