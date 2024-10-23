@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { getAllPostIds } from "../lib/posts";
+import { getAllPosts } from "../lib/posts";
 import Navbar from "../ui/navbar";
 
 
+
 export default function Page() {
-  const allPostsData = getAllPostIds();
+  const allPostsData = getAllPosts();
   console.log(allPostsData)
   return (
     <div className="bg-background text-dark dark:bg-darkBackground dark:text-darkForeground paddingPage min-h-screen">
@@ -15,10 +16,10 @@ export default function Page() {
       </div>
 
       <ul>
-        {allPostsData?.map(({ params }) => (
-          <li key={params.id}>
-            <Link href={`/blog/${params.id}`}>
-              {params.id}
+        {allPostsData?.map((post) => (
+          <li key={post?.id}>
+            <Link href={`/blog/${post?.id}`}>
+              {post?.title}
             </Link>
           </li>
         ))}
