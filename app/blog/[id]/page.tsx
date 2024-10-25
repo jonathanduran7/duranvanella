@@ -1,5 +1,6 @@
 import Navbar from '@/app/ui/navbar';
 import { getPostData } from '../../lib/posts';
+import dayjs from 'dayjs';
 
 
 export default async function Post({ params }: { params: { id: string } }) {
@@ -8,10 +9,9 @@ export default async function Post({ params }: { params: { id: string } }) {
     <div className="bg-background text-dark dark:bg-darkBackground dark:text-darkForeground paddingPage min-h-screen">
       <Navbar />
       <article className='prose mt-5'>
-        <h1>{postData?.title}</h1>
 
-        <div className='mt-5 mb-5'>
-          <p>{postData?.date}</p>
+        <div className='mt-5 mb-2'>
+          <p className="dark:text-gray-soft text-[#979797] text-[12px] font-medium">{dayjs(postData.date).format('MMMM DD, YYYY')}</p>
         </div>
 
         <div dangerouslySetInnerHTML={{ __html: postData.content }} />
