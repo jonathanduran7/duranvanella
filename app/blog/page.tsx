@@ -10,7 +10,7 @@ export default function Page() {
       <Navbar />
 
       <div className="mt-5 mb-5">
-        <h1 className="text-4xl">Welcome to my Next.js blog</h1>
+        <h1 className="text-xl">My blog</h1>
       </div>
 
       <div className="flex flex-col gap-5 pb-6">
