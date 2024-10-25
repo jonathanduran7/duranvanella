@@ -5,7 +5,6 @@ import ArticleCard from "./components/article";
 
 export default function Page() {
   const allPostsData = getAllPosts();
-  console.log(allPostsData)
   return (
     <div className="bg-background text-dark dark:bg-darkBackground dark:text-darkForeground paddingPage min-h-screen">
       <Navbar />
@@ -14,11 +13,13 @@ export default function Page() {
         <h1 className="text-4xl">Welcome to my Next.js blog</h1>
       </div>
 
-      {allPostsData?.map((post) => (
-        <Link href={`/blog/${post?.id}`} key={post.id}>
-          <ArticleCard post={post} />
-        </Link>
-      ))}
+      <div className="flex flex-col gap-5 pb-6">
+        {allPostsData?.map((post) => (
+          <Link href={`/blog/${post?.id}`} key={post.id}>
+            <ArticleCard post={post} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

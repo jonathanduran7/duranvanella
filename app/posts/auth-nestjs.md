@@ -1,7 +1,7 @@
 ---
 title: "Auth with Nestjs"
 date: "2024-10-22"
-description: "Descripcion de auth with Nestjs. This post will show you how to authenticate with Nestjs and Passport. We will use JWT as the authentication method."
+description: "This post will show you how to authenticate with Nestjs and Passport. We will use JWT as the authentication method."
 ---
 
 # Auth with Nestjs 
