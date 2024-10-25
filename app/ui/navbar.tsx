@@ -1,6 +1,6 @@
 'use client'
 
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ThemeContext } from '../context/ThemeContext';
