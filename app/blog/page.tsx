@@ -1,28 +1,24 @@
 import Link from "next/link";
-import { getAllPostIds } from "../lib/posts";
+import { getAllPosts } from "../lib/posts";
 import Navbar from "../ui/navbar";
-
+import ArticleCard from "./components/article";
 
 export default function Page() {
-  const allPostsData = getAllPostIds();
+  const allPostsData = getAllPosts();
   console.log(allPostsData)
   return (
     <div className="bg-background text-dark dark:bg-darkBackground dark:text-darkForeground paddingPage min-h-screen">
       <Navbar />
 
-      <div className="mt-5">
+      <div className="mt-5 mb-5">
         <h1 className="text-4xl">Welcome to my Next.js blog</h1>
       </div>
 
-      <ul>
-        {allPostsData?.map(({ params }) => (
-          <li key={params.id}>
-            <Link href={`/blog/${params.id}`}>
-              {params.id}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {allPostsData?.map((post) => (
+        <Link href={`/blog/${post?.id}`} key={post.id}>
+          <ArticleCard post={post} />
+        </Link>
+      ))}
     </div>
   );
 }

@@ -22,11 +22,13 @@ const config: Config = {
         foreground: "var(--foreground)",
         darkBackground: "var(--dark-background)",
         darkForeground: "var(--dark-foreground)",
+        darkTerciary: "#212121",
       },
       textColor: {
         'gray': '#D4D4D4',
         'gray-dark': '#787878',
         'soft-gray': '#d1d5db',
+        'gray-soft': '#8f8f8f',
       },
     },
     fontSize: {
